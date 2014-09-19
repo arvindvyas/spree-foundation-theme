@@ -1,2 +1,2 @@
 add_to_attributes 'ul#products'
-attributes class: 'small-block-grid-3'
+attributes class: 'small-block-grid-2 medium-block-grid-3'

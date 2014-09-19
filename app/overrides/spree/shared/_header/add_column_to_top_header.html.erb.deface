@@ -1,0 +1,25 @@
+<!-- insert_after 'figure#logo' -->
+<div class="columns medium-6">
+<i class="fa fa-envelope"></i> 
+<%= link_to "Contact Us", "#" %> | 
+<i class="fa fa-phone"></i>
+<span>0845 604 2320</span> 
+
+<div id="main-nav-bar" class="inline" data-hook>
+<span id="link-to-cart" data-hook>
+<noscript>
+<%= link_to Spree.t(:cart), '/cart' %>
+</noscript>
+</span>
+<script>Spree.fetch_cart()</script>
+</div>
+
+<div id="top-nav-bar" class="columns ten">
+<div id="nav-bar" class="inline" data-hook>
+<span id="search-bar" data-hook>
+<%= render :partial => 'spree/shared/search' %>
+</span>
+</div>
+</div>
+
+</div>
