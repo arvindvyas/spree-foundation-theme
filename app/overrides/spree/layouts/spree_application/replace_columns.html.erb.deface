@@ -1,0 +1,2 @@
+<!-- set_attributes 'div#content'
+attributes :class => 'columns <%= !content_for?(:sidebar) ? "large-12" : "large-9" %>'  -->
