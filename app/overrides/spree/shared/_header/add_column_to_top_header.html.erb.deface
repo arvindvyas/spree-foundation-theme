@@ -1,25 +1,28 @@
 <!-- insert_after 'figure#logo' -->
-<div class="columns medium-6">
-<i class="fa fa-envelope"></i> 
-<%= link_to "Contact Us", "#" %> | 
-<i class="fa fa-phone"></i>
-<span>0845 604 2320</span> 
-
-<div id="main-nav-bar" class="inline" data-hook>
-<i class="fa fa-shopping-cart"></i> 
-<span id="link-to-cart" data-hook>
-<noscript><%= link_to Spree.t(:cart), '/cart' %>
-</noscript>
-</span>
-<script>Spree.fetch_cart()</script>
+<div class="columns medium-4">
+	<div class="contact-wrapper">
+	<i class="fa fa-envelope"></i> 
+	<%= link_to "Contact Us", "#" %> | 
+	<i class="fa fa-phone"></i>
+	<span>0845 604 2320</span> 
 </div>
-
-<div id="top-nav-bar" class="columns ten">
-<div id="nav-bar" class="inline" data-hook>
-<span id="search-bar" data-hook>
-<%= render :partial => 'spree/shared/search' %>
-</span>
+<div class="basket-link" data-hook>
+	<i class="fa fa-shopping-cart"></i> 
+	<span id="link-to-cart" data-hook>
+		<noscript><%= link_to Spree.t(:cart), '/cart' %>
+		</noscript>
+	</span>
+	<script>Spree.fetch_cart()</script>
 </div>
-</div>
-
+<div class="search-wrapper" data-hook>
+	<span id="search-bar" data-hook>
+		<div class="row collapse">
+			<div class="small-9 columns">
+				<%= search_field_tag :keywords, params[:keywords], :placeholder => Spree.t(:search) %>
+			</div>
+			<div class="small-3 columns">
+			  <%= submit_tag Spree.t(:search), :name => nil, :class => 'button postfix' %>
+			</div>
+		</div>
+	</span>
 </div>

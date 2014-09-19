@@ -3,3 +3,16 @@ Placeholder manifest file.
 the installer will append this file to the app vendored assets here: 'vendor/assets/stylesheets/spree/frontend/all.css'
 */
 @import "foundation.scss";
+@import "font-awesome";
+
+.breadcrumb-list {
+	margin: 20px 0;
+	li {
+		margin-left: 0;
+		a:after {
+			content: "/\00a0";
+    	padding: 0 10px;
+    	color: #ccc
+		}
+	}
+}
