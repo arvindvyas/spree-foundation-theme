@@ -6,9 +6,9 @@
 <span>0845 604 2320</span> 
 
 <div id="main-nav-bar" class="inline" data-hook>
+<i class="fa fa-shopping-cart"></i> 
 <span id="link-to-cart" data-hook>
-<noscript>
-<%= link_to Spree.t(:cart), '/cart' %>
+<noscript><%= link_to Spree.t(:cart), '/cart' %>
 </noscript>
 </span>
 <script>Spree.fetch_cart()</script>
