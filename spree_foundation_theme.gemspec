@@ -20,6 +20,8 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'foundation-rails', '5.4.3.1'
 
+  s.add_dependency 'font-awesome-rails', '4.2.0.0'
+
   s.add_development_dependency 'capybara', '~> 2.1'
   s.add_development_dependency 'coffee-rails'
   s.add_development_dependency 'database_cleaner'
