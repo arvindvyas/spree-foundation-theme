@@ -1,0 +1,2 @@
+add_to_attributes 'div[data-hook="product_show"]'
+attributes class: 'row'
