@@ -10,7 +10,7 @@ en:
         lastname: Last Name
         phone: Phone
         state: State
-        zipcode: Zip Code
+        zipcode: Post Code
       spree/calculator/tiered_flat_rate:
         preferred_base_amount: Base Amount
         preferred_tiers: Tiers
@@ -60,7 +60,7 @@ en:
         lastname: Billing address last name
         phone: Billing address phone
         state: Billing address state
-        zipcode: Billing address zipcode
+        zipcode: Billing address Post Code
       spree/order/ship_address:
         address1: Shipping address street
         city: Shipping address city
@@ -68,7 +68,7 @@ en:
         lastname: Shipping address last name
         phone: Shipping address phone
         state: Shipping address state
-        zipcode: Shipping address zipcode
+        zipcode: Shipping address Post Code
       spree/payment:
         amount: Amount
       spree/payment_method:
@@ -1184,9 +1184,9 @@ en:
     width: Width
     year: Year
     you_have_no_orders_yet: You have no orders yet
-    your_cart_is_empty: Your cart is empty
+    your_cart_is_empty: Your basket is empty
     your_order_is_empty_add_product: Your order is empty, please search for and add a product above
-    zip: Zip
-    zipcode: Zip Code
+    zip: Post Code
+    zipcode: Post Code
     zone: Zone
     zones: Zones
