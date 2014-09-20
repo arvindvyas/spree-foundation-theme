@@ -22,6 +22,8 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'font-awesome-rails', '4.2.0.0'
 
+  s.add_dependency 'kramdown', '1.4.2'
+
   s.add_development_dependency 'capybara', '~> 2.1'
   s.add_development_dependency 'coffee-rails'
   s.add_development_dependency 'database_cleaner'

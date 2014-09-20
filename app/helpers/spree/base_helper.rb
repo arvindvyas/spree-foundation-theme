@@ -1,6 +1,13 @@
 module Spree
   module BaseHelper
 
+    # Convert Markdown to HTML
+    require 'kramdown'
+    def md(text)
+      return "" if text.blank?
+      Kramdown::Document.new(text).to_html.html_safe
+    end
+
     # Defined because Rails' current_page? helper is not working when Spree is mounted at root.
     def current_spree_page?(url)
       path = request.fullpath.gsub(/^\/\//, '/')

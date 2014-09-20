@@ -1,0 +1,2 @@
+replace 'erb:contains("product_description(@product) rescue Spree.t(:product_has_no_description)")'
+text '<%= md(@product.description) rescue Spree.t(:product_has_no_description) %>'
