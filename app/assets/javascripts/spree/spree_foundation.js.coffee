@@ -1,2 +1,4 @@
 //= require foundation
-$(document).foundation();
+$(document).ready ->
+  $(document).foundation()
+  return

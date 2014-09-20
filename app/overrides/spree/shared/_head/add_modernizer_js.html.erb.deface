@@ -1,0 +1,2 @@
+<!-- insert_after 'erb:contains("javascript_include_tag")' -->
+<%= javascript_include_tag "vendor/modernizr" %>
