@@ -1,0 +1,2 @@
+<!-- set_attributes 'div[data-hook="checkout_form_wrapper"]'
+attributes :class => "columns <%= if @order.state != 'confirm' then 'medium-8' else 'medium-12' end %>"  -->
