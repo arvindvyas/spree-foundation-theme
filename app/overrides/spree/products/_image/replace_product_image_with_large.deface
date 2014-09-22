@@ -1,0 +1,2 @@
+replace 'erb:contains("image_tag image.attachment.url(:product), :itemprop =>")'
+text '<%= image_tag image.attachment.url(:large), :itemprop => "image" %>'
