@@ -1,0 +1,7 @@
+<!-- replace "erb[silent]:contains('defined?(image) && image')"
+closing_selector "erb[silent]:contains('end')" -->
+<% if defined?(image) && image %>
+  <%= image_tag image.attachment.url(:product), :itemprop => "image" %>
+<% else %>
+  <%= create_product_image_tag(@product.images.first, @product, {}, :large) %>
+<% end %>
