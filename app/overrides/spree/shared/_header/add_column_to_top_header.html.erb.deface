@@ -1,5 +1,5 @@
 <!-- insert_after 'figure#logo' -->
-<div class="columns medium-4">
+<div class="columns medium-5">
 	<div class="contact-wrapper">
 	<i class="fa fa-envelope"></i> 
 	<%= link_to "Contact Us", "#" %> | 
@@ -9,10 +9,17 @@
 <div class="basket-link" data-hook>
 	<i class="fa fa-shopping-cart"></i> 
 	<span id="link-to-cart" data-hook>
-		<noscript><%= link_to Spree.t(:cart), '/cart' %>
+		<noscript>
+		<%= link_to Spree.t(:cart), '/cart' %>
 		</noscript>
-	</span>
+	</span> |
 	<script>Spree.fetch_cart()</script>
+	<% if spree_current_user %>
+	<%= link_to t('logout'), spree_logout_path, :class => "cart" %> |
+	<%= link_to t('my_account'), account_path, :class => "cart" %>
+	<% else %>
+	<%= link_to t('log_in'), spree_login_path, :class => "cart" %>
+	<% end %>
 </div>
 <div class="search-wrapper" data-hook>
 	<span id="search-bar" data-hook>

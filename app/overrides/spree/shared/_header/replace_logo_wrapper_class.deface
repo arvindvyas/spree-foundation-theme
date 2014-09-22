@@ -1,2 +1,2 @@
 set_attributes 'figure#logo'
-attributes class: 'medium-8 columns logo-wrapper'
+attributes class: 'medium-7 columns logo-wrapper'
