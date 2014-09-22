@@ -1,0 +1,2 @@
+insert_top 'div#content'
+cut 'erb:contains("breadcrumbs(@taxon)")'
