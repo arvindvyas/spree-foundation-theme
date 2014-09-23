@@ -1,2 +1,2 @@
 set_attributes 'div.add-to-cart'
-attributes class: 'add-to-basket columns medium-8 end'
+attributes class: 'add-to-basket columns medium-7 end'

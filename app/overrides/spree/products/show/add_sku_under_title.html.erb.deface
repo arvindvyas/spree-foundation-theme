@@ -1,2 +1,2 @@
 <!-- insert_after 'h1.product-title' -->
-<h5 class="lead">Ref: <%= @product.sku %></h5>
+<p class="product-ref">Ref: <%= @product.sku %></p>

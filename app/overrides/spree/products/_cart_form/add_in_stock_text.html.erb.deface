@@ -1,2 +1,2 @@
-<!-- insert_after 'link[itemprop="availability"]' -->
-<span class="in-stock"><%= Spree.t(:in_stock) %></span>
+<!-- insert_after 'div[data-hook="product_price"]' -->
+<p class="in-stock"><i class="fa fa-check-circle"></i> <%= Spree.t(:in_stock) %></span>

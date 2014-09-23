@@ -857,7 +857,7 @@ en:
     order_updated: Order Updated
     orders: Orders
     out_of_stock: Out of Stock
-    in_stock: In stock
+    in_stock: In stock and available for next dat delivery
     overview: Overview
     package_from: package from
     pagination:
