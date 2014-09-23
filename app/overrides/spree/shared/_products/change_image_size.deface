@@ -1,0 +1,2 @@
+replace 'erb:contains("link_to small_image")'
+text '<%= link_to product_image(product, :itemprop => "image"), url, :itemprop => "url" %>'
