@@ -1,0 +1,2 @@
+remove_from_attributes 'div.row[data-hook="product_right_part_wrap"]'
+attributes class: 'row'

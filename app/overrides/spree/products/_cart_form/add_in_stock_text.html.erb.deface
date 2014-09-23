@@ -1,0 +1,2 @@
+<!-- insert_after 'link[itemprop="availability"]' -->
+<span class="in-stock"><%= Spree.t(:in_stock) %></span>

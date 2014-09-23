@@ -1,0 +1,2 @@
+<!-- replace "erb[loud]:contains('add-to-cart-button')" -->
+<%= button_tag :class => 'small primary', :id => 'add-to-cart-button', :type => :submit do %>

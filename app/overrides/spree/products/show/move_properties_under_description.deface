@@ -1,0 +1,4 @@
+insert_after 'div[itemprop=description]'
+sequence :after => 'move_product_description_below_cart_form'
+cut 'div[data-hook=product_properties]'
+
