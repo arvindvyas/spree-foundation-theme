@@ -1,0 +1,2 @@
+replace 'erb[loud]:contains("number_field_tag :quantity, 1")'
+text '<%= hidden_field_tag :quantity, 1'

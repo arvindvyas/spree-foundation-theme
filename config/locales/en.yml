@@ -178,8 +178,8 @@ en:
         one: Promotion
         other: Promotions
       spree/property:
-        one: Property
-        other: Properties
+        one: Specification
+        other: Specification
       spree/prototype:
         one: Prototype
         other: Prototypes
@@ -335,7 +335,7 @@ en:
     add_one: Add One
     add_option_value: Add Option Value
     add_product: Add Product
-    add_product_properties: Add Product Properties
+    add_product_properties: Add Product Property
     add_rule_of_type: Add rule of type
     add_state: Add State
     add_stock: Add Stock
@@ -360,7 +360,7 @@ en:
         overview: Overview
         products: Products
         promotions: Promotions
-        properties: Properties
+        properties: Property
         prototypes: Prototypes
         reports: Reports
         taxonomies: Taxonomies
@@ -420,7 +420,7 @@ en:
     back_to_payments_list: Back To Payments List
     back_to_products_list: Back To Products List
     back_to_promotions_list: Back To Promotions List
-    back_to_properties_list: Back To Properties List
+    back_to_properties_list: Back To Specification List
     back_to_prototypes_list: Back To Prototypes List
     back_to_reports_list: Back To Reports List
     back_to_shipping_categories: Back To Shipping Categories
@@ -908,7 +908,7 @@ en:
     product_details: Product Details
     product_has_no_description: This product has no description
     product_not_available_in_this_currency: This product is not available in the selected currency.
-    product_properties: Product Properties
+    product_properties: Product Specification
     product_rule:
       choose_products: Choose products
       label: Order must contain %{select} of these products
