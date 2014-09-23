@@ -1,0 +1,13 @@
+<!-- replace "erb[silent]:contains('@product_properties')"
+closing_selector "erb[silent]:contains('end')" -->
+<% unless @product_properties.empty? %>  
+  <h6 class="product-section-title"><%= Spree.t('properties')%></h6>
+  <ul id="product-properties" class="product-specification" data-hook>
+      <% @product_properties.each do |product_property| %>
+          <li class="row">
+          <span class="medium-4 columns"><%= product_property.property.presentation %></span>
+          <span class="medium-8 columns"><%= product_property.value %></span>
+          </li>
+      <% end %>
+  </ul>
+<% end %>
