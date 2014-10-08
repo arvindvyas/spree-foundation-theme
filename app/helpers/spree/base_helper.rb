@@ -27,7 +27,7 @@ module Spree
         text = "#{text}: (#{Spree.t('empty')})"
         css_class = 'empty'
       else
-        text = "#{text}: (#{simple_current_order.item_count})  <span class='amount'>#{simple_current_order.display_total.to_html}</span>"
+        text = "#{text}: (#{simple_current_order.item_count})"
         css_class = 'full'
       end
 
@@ -144,7 +144,7 @@ module Spree
     end
 
     def link_to_tracking(shipment, options = {})
-      return unless shipment.tracking && shipment.shipping_method
+      return unless shipment.tracking
 
       if shipment.tracking_url
         link_to(shipment.tracking, shipment.tracking_url, options)
@@ -156,7 +156,7 @@ module Spree
     private
     # Returns style of image or nil
     def image_style_from_method_name(method_name)
-      if style = method_name.to_s.sub(/_image$/, '')
+      if method_name.to_s.match(/_image$/) && style = method_name.to_s.sub(/_image$/, '')
         possible_styles = Spree::Image.attachment_definitions[:attachment][:styles]
         style if style.in? possible_styles.with_indifferent_access
       end
