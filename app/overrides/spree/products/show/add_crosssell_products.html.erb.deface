@@ -1,0 +1,16 @@
+<!-- insert_after 'div#related-products'
+sequence :after => 'add_related_products' -->
+<div class="large-12 columns">
+  <article class="row">
+    <div class="large-12 columns similar-products">
+      <div id="similar-products" data-hook="similar_products">
+        <%= image_tag 'select2-spinner.gif' %>
+      </div>
+      <script>
+      $.get( '/products/<%= @product.slug %>/similar', function ( data ) {
+        $( "#similar-products" ).html( data );
+      } )
+      </script>
+    </div>
+  </article>
+</div>

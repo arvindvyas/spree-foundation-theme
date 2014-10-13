@@ -1,0 +1,54 @@
+<!-- insert_before 'ul#products' -->
+<section class="row sort-products">
+  <% if @taxon %>
+  <div class="large-6 columns size-view">
+    <ul>
+      <li class="size"><%= pluralize @products.total_count, 'products' %> found</li>
+      <li>|</li>
+      <li><label>View</label></li>
+      <li><%= link_to "16", pagination_path(display_per_page: 16, return_to: seo_url(@taxon)), method: :put, class: ("selected" if session[:display_per_page] == "16") %></li>
+      <li><%= link_to "32", pagination_path(display_per_page: 32, return_to: seo_url(@taxon)), method: :put, class: ("selected" if session[:display_per_page] == "32") %></li>
+      <li><%= link_to "64", pagination_path(display_per_page: 64, return_to: seo_url(@taxon)), method: :put, class: ("selected" if session[:display_per_page] == "64") %></li>
+      <li> <%= link_to "All", pagination_path(display_all: true, return_to: seo_url(@taxon)), method: :put, class: ("selected" if session[:display_all] == true) %></li>
+      <li><label>per page</label></li>
+    </ul>
+  </div>
+  <div class="large-6 columns sorting">
+    <% unless params[:keywords].present? %>
+      <ul>
+        <li><label>Sort by</label></li>
+        <li><%= form_tag pagination_path, method: :put, id: "pagination-sort" do %>
+          <%= hidden_field_tag "return_to", seo_url(@taxon) %>
+          <%= select_tag "ordering", options_for_select([["Price (Low-High)", "price_asc"], ["Price (High-Low)", "price_desc"], ["Name", "name"]], session[:ordering]), class: "pagination-sort-type" %>
+          <% end %>
+        </li>
+      </ul>
+    <% end %>
+  </div>
+  <% else %>
+  <div class="large-6 columns size-view">
+    <ul>
+      <li class="size"><%= pluralize @products.total_count, 'products' %> found</li>
+      <li>|</li>
+      <li><label>View</label></li>
+      <li><%= link_to "16", pagination_path(display_per_page: 16), method: :put, class: ("selected" if session[:display_per_page] == "16") %></li>
+      <li><%= link_to "32", pagination_path(display_per_page: 32), method: :put, class: ("selected" if session[:display_per_page] == "32") %></li>
+      <li><%= link_to "64", pagination_path(display_per_page: 64), method: :put, class: ("selected" if session[:display_per_page] == "64") %></li>
+      <li><%= link_to "All", pagination_path(display_all: true), method: :put, class: ("selected" if session[:display_all] == true) %></li>
+      <li><label>per page</label></li>
+    </ul>
+  </div>
+  <div class="large-6 columns sorting">
+    <% unless params[:keywords].present? %>
+      <ul>
+        <li><label>Sort by</label></li>
+        <li><%= form_tag pagination_path, method: :put, id: "pagination-sort" do %>
+          <%= select_tag "ordering",
+          options_for_select([["Price (Low-High)", "price_asc"], ["Price (High-Low)", "price_desc"], ["Name", "name"]], session[:ordering]), class: "pagination-sort-type" %>
+          <% end %>
+        </li>
+      </ul>
+    <% end %>
+  </div>
+  <% end %>
+</section>
