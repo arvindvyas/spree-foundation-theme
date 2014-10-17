@@ -2,5 +2,5 @@
 $(document).ready ->
   $(document).foundation()
   $('#ordering').change ->
-    $('#pagination-sort').submit()
+    $('#pagination_sort').submit()
   return

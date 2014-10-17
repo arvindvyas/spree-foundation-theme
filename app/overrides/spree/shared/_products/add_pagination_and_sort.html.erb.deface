@@ -1,8 +1,8 @@
 <!-- insert_before 'ul#products' -->
-<section class="row sort-products">
+<section class="sort-products">
   <% if @taxon %>
   <div class="large-6 columns size-view">
-    <ul>
+    <ul class="inline-list">
       <li class="size"><%= pluralize @products.total_count, 'products' %> found</li>
       <li>|</li>
       <li><label>View</label></li>
@@ -15,19 +15,22 @@
   </div>
   <div class="large-6 columns sorting">
     <% unless params[:keywords].present? %>
-      <ul>
-        <li><label>Sort by</label></li>
-        <li><%= form_tag pagination_path, method: :put, id: "pagination-sort" do %>
-          <%= hidden_field_tag "return_to", seo_url(@taxon) %>
-          <%= select_tag "ordering", options_for_select([["Price (Low-High)", "price_asc"], ["Price (High-Low)", "price_desc"], ["Name", "name"]], session[:ordering]), class: "pagination-sort-type" %>
-          <% end %>
-        </li>
-      </ul>
+      <div class="row">
+        <div class="small-4 columns">
+          <label>Sort by</label>
+        </div>
+        <div class="large-8 columns">
+          <%= form_tag pagination_path, method: :put, id: "pagination_sort" do %>
+            <%= select_tag "ordering",
+            options_for_select([["Price (Low-High)", "price_asc"], ["Price (High-Low)", "price_desc"], ["Name", "name"]], session[:ordering]), class: "pagination-sort-type" %>
+            <% end %>
+        </div>
+      </div>
     <% end %>
   </div>
   <% else %>
-  <div class="large-6 columns size-view">
-    <ul>
+  <div class="large-8 columns size-view">
+    <ul class="inline-list">
       <li class="size"><%= pluralize @products.total_count, 'products' %> found</li>
       <li>|</li>
       <li><label>View</label></li>
@@ -38,16 +41,19 @@
       <li><label>per page</label></li>
     </ul>
   </div>
-  <div class="large-6 columns sorting">
+  <div class="large-4 columns sorting">
     <% unless params[:keywords].present? %>
-      <ul>
-        <li><label>Sort by</label></li>
-        <li><%= form_tag pagination_path, method: :put, id: "pagination-sort" do %>
-          <%= select_tag "ordering",
-          options_for_select([["Price (Low-High)", "price_asc"], ["Price (High-Low)", "price_desc"], ["Name", "name"]], session[:ordering]), class: "pagination-sort-type" %>
-          <% end %>
-        </li>
-      </ul>
+      <div class="row">
+        <div class="small-4 columns">
+          <label>Sort by</label>
+        </div>
+        <div class="large-8 columns">
+          <%= form_tag pagination_path, method: :put, id: "pagination_sort" do %>
+            <%= select_tag "ordering",
+            options_for_select([["Price (Low-High)", "price_asc"], ["Price (High-Low)", "price_desc"], ["Name", "name"]], session[:ordering]), class: "pagination-sort-type" %>
+            <% end %>
+        </div>
+      </div>
     <% end %>
   </div>
   <% end %>
