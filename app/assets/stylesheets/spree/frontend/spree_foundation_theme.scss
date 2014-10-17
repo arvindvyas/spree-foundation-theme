@@ -16,3 +16,33 @@ the installer will append this file to the app vendored assets here: 'vendor/ass
 		}
 	}
 }
+
+.sort-products {
+	padding-bottom: 1rem;
+}
+
+.size-view {
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	li {
+		float: left;
+		list-style-type: none;
+		margin-left: 0.5rem;
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}
+
+.sorting {
+	.pagination-sort-type {
+		height: auto;
+		font-size: 0.8rem;
+		margin: 0;
+		padding: 0.25rem;
+	}
+	label {
+		text-align: right;
+	}
+}

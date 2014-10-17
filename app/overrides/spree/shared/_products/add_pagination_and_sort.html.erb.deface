@@ -1,8 +1,8 @@
 <!-- insert_before 'ul#products' -->
-<section class="sort-products">
+<section class="row sort-products">
   <% if @taxon %>
-  <div class="large-6 columns size-view">
-    <ul class="inline-list">
+  <div class="large-8 columns size-view">
+    <ul>
       <li class="size"><%= pluralize @products.total_count, 'products' %> found</li>
       <li>|</li>
       <li><label>View</label></li>
@@ -13,7 +13,7 @@
       <li><label>per page</label></li>
     </ul>
   </div>
-  <div class="large-6 columns sorting">
+  <div class="large-4 columns sorting">
     <% unless params[:keywords].present? %>
       <div class="row">
         <div class="small-4 columns">
@@ -30,7 +30,7 @@
   </div>
   <% else %>
   <div class="large-8 columns size-view">
-    <ul class="inline-list">
+    <ul>
       <li class="size"><%= pluralize @products.total_count, 'products' %> found</li>
       <li>|</li>
       <li><label>View</label></li>
