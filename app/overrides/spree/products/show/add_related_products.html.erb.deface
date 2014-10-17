@@ -1,15 +1,11 @@
 <!-- insert_after 'div#thumbnails' -->
-<div class="large-12 columns">
-  <article class="row">
-    <div class="large-12 columns related-products">
-      <div id="related-products" data-hook="related_products">
-        <%= image_tag 'select2-spinner.gif' %>
-      </div>
-      <script>
-      $.get( '/products/<%= @product.slug %>/related', function ( data ) {
-        $( "#related-products" ).html( data );
-      } )
-      </script>
-    </div>
-  </article>
+<div class="related-products">
+  <div id="related-products" data-hook="related_products">
+    <%= image_tag 'select2-spinner.gif' %>
+  </div>
+  <script>
+  $.get( '/products/<%= @product.slug %>/related', function ( data ) {
+    $( "#related-products" ).html( data );
+  } )
+  </script>
 </div>
