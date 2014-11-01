@@ -7,7 +7,7 @@
 <% end %>
 <% if @taxon.icon.present? %>
 <div class="medium-3 columns">
-<%= image_tag(@taxon.icon(:product)), class: 'taxon-icon' %>
+<%= image_tag @taxon.icon(:product), class: 'taxon-icon' %>
 </div>
 <% end %>
 </div>
