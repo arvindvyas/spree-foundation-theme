@@ -2,10 +2,10 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_foundation_theme'
-  s.version     = '2.3.8'
+  s.version     = '2.3.9'
   s.summary     = 'Spree Foundation Theme'
   s.description = ''
-  s.required_ruby_version = '>= 1.9.3'
+  s.required_ruby_version = '>= 2.1.2'
 
   s.author    = 'Paul Groves'
   s.email     = 'paul@grov.es'
