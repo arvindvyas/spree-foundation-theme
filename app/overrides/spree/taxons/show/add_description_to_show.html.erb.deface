@@ -1,12 +1,12 @@
 <!-- insert_before 'div[data-hook=taxon_products]' -->
 <div class="row">
 <% if @taxon.description.present? %>
-<div class="columns <%= !content_for?(@taxon.icon) ? "medium-10" : "medium-12" %>"">
+<div class="<%= !content_for?(@taxon.icon) ? "medium-9" : "medium-12" %>" columns">
 <%= md(@taxon.description) %>
 </div>
 <% end %>
 <% if @taxon.icon.present? %>
-<div class="medium-2 columns">
+<div class="medium-3 columns">
 <%= image_tag(@taxon.icon) %>
 </div>
 <% end %>
