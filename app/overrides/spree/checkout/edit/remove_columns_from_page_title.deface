@@ -1,2 +1,0 @@
-set_attributes 'h1[data-hook="checkout_title"]'
-attributes class: 'columns medium-12 page-title'

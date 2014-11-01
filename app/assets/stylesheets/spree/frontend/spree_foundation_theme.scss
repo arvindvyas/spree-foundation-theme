@@ -4,13 +4,24 @@ the installer will append this file to the app vendored assets here: 'vendor/ass
 */
 
 .breadcrumb-list {
-	margin: 0 0 20px 0;
+	margin: 0 0 1rem;
+
 	li {
 		margin-left: 0;
+
 		a:after {
+    	color: #ccc;
 			content: "/\00a0";
     	padding: 0 10px;
-    	color: #ccc
+    	position: absolute;
+		}
+
+		&:last-child {
+			a {
+				&:after {
+					content: '';
+				}
+			}
 		}
 	}
 }
@@ -20,13 +31,17 @@ the installer will append this file to the app vendored assets here: 'vendor/ass
 }
 
 .size-view {
-	overflow: hidden;
-	margin: 0;
-	padding: 0;
+	ul {
+		margin: 0;
+		overflow: hidden;
+		padding: 0;
+	}
+
 	li {
 		float: left;
 		list-style-type: none;
 		margin-left: 0.5rem;
+
 		&:first-child {
 			margin-left: 0;
 		}
@@ -35,11 +50,12 @@ the installer will append this file to the app vendored assets here: 'vendor/ass
 
 .sorting {
 	.pagination-sort-type {
-		height: auto;
 		font-size: 0.8rem;
+		height: auto;
 		margin: 0;
 		padding: 0.25rem;
 	}
+
 	label {
 		text-align: right;
 	}

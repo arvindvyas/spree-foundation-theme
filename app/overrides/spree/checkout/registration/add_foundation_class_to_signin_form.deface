@@ -1,0 +1,3 @@
+set_attributes 'div#account'
+attributes class: 'medium-6 columns'
+
