@@ -1,0 +1,2 @@
+<!-- replace "erb[loud]:contains('Spree.t(:login)')" -->
+<%= f.submit 'Log In', :class => 'button small success', :tabindex => 4 %>

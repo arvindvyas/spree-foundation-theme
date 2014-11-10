@@ -1,0 +1,2 @@
+<!-- replace "erb[loud]:contains('Spree.t(:reset_password)')" -->
+<%= f.submit Spree.t(:reset_password), :class => 'button small success' %>

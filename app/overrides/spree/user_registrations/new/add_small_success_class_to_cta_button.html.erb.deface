@@ -1,0 +1,2 @@
+<!-- replace "erb[loud]:contains('Spree.t(:create)')" -->
+<%= f.submit 'Register', :class => 'button small success' %>
