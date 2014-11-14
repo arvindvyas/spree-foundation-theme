@@ -3,6 +3,10 @@ Placeholder manifest file.
 the installer will append this file to the app vendored assets here: 'vendor/assets/stylesheets/spree/frontend/all.css'
 */
 
+.alert-box {
+	font-weight: bold;
+}
+
 .breadcrumb-list {
 	margin: 0 0 1rem;
 
@@ -27,7 +31,7 @@ the installer will append this file to the app vendored assets here: 'vendor/ass
 }
 
 .sort-products {
-	padding-bottom: 1rem;
+	padding: 1rem 0;
 }
 
 .size-view {
