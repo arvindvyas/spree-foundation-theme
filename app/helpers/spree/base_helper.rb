@@ -78,6 +78,7 @@ module Spree
       ignore_types = ["order_completed"].concat(Array(opts[:ignore_types]).map(&:to_s) || [])
 
       flash.each do |msg_type, text|
+        msg_type = "alert" if msg_type == "error"
         unless ignore_types.include?(msg_type)
           concat(content_tag :div, "#{text}<a href=\"#\" class=\"close\">&times;</a>".html_safe, class: "alert-box #{msg_type}", :"data-alert" => "")
         end
