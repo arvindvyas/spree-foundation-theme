@@ -1,2 +1,0 @@
-set_attributes 'div[data-hook="product_left_part"]'
-attributes class: 'columns medium-6'
