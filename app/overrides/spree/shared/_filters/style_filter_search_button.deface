@@ -1,3 +1,0 @@
-replace 'erb[loud]:contains("submit_tag Spree.t(:search), :name => nil")'
-text '<%= submit_tag Spree.t(:search), :name => nil, :class => "button tiny" %>'
-
