@@ -22,7 +22,7 @@
         <div class="small-9 medium-8 columns">
           <%= form_tag pagination_path, method: :put, id: "pagination_sort" do %>
             <%= select_tag "ordering",
-            options_for_select([["Price (Low-High)", "price_asc"], ["Price (High-Low)", "price_desc"], ["Name", "name"]], session[:ordering]), class: "pagination-sort-type" %>
+            options_for_select([["Bestselling", "bestselling"],["Price (Low-High)", "price_asc"], ["Price (High-Low)", "price_desc"], ["Name", "name"]], session[:ordering]), class: "pagination-sort-type" %>
             <% end %>
         </div>
       </div>
@@ -50,7 +50,7 @@
         <div class="large-8 columns">
           <%= form_tag pagination_path, method: :put, id: "pagination_sort" do %>
             <%= select_tag "ordering",
-            options_for_select([["Price (Low-High)", "price_asc"], ["Price (High-Low)", "price_desc"], ["Name", "name"]], session[:ordering]), class: "pagination-sort-type" %>
+            options_for_select([["Bestselling", "bestselling"],["Price (Low-High)", "price_asc"], ["Price (High-Low)", "price_desc"], ["Name", "name"]], session[:ordering]), class: "pagination-sort-type" %>
             <% end %>
         </div>
       </div>
