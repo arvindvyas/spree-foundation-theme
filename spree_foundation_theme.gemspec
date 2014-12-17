@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_foundation_theme'
-  s.version     = '2.4.3'
+  s.version     = '2.4.4'
   s.summary     = 'Spree Foundation Theme'
   s.description = ''
   s.required_ruby_version = '>= 2.1.2'
