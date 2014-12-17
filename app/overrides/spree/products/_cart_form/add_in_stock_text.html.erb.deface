@@ -1,2 +1,4 @@
 <!-- insert_after 'div[data-hook="product_price"]' -->
-<p class="in-stock"><i class="fa fa-check-circle"></i> <%= Spree.t(:in_stock) %></span>
+<% if @product.master.can_supply? %>
+<p class="in-stock"><i class="fa fa-check-circle"></i> <%= Spree.t(:in_stock) %></p>
+<% end %>
